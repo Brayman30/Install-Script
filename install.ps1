@@ -1,7 +1,3 @@
-##Display A Diologue
-Add-Type -AssemblyName PresentationFramework
-[System.Windows.MessageBox]::Show('Make sure You have access to Admin, as this script will ask for Admin access later on.','Admin Check','OkCancel','Info')
-
 ## Make sure any lines that need to be run as Admin are run as Admin.
 if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator"))  
 {  
